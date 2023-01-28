@@ -36,15 +36,15 @@ main()
   # Rose Pine Color Pallette
   white='#ffffff'
   gray='#0b2942'
-  dark_gray='#01111d'
+  dark_gray='#6e6a86'
   high_contrast_pane_border='#64B5F6'
   pane_border='#5f7e97'
   blue='#3e8fb0',
   brightCyan='#c4a7e7'
   cyan='#21c7a8'
-  green='#eb6f92'
-  brightOrange='#f6c177'
-  orange='#f6c177'
+  love='#eb6f92'
+  brightrose='#ea9a97'
+  rose='#ebbcba'
   red='#ef5350'
   pink='#ebbcba'
   brightYellow="#ea9a97"
@@ -110,7 +110,7 @@ main()
   # Powerline Configuration
   if $show_powerline; then
 
-      tmux set-option -g status-left "#[bg=${green},fg=${dark_gray}]#{?client_prefix,#[bg=${yellow}],} ${left_icon} #[fg=${green},bg=${gray}]#{?client_prefix,#[fg=${yellow}],}${left_sep}"
+      tmux set-option -g status-left "#[bg=${love},fg=${dark_gray}]#{?client_prefix,#[bg=${yellow}],} ${left_icon} #[fg=${love},bg=${gray}]#{?client_prefix,#[fg=${yellow}],}${left_sep}"
       tmux set-option -g  status-right ""
       powerbg=${gray}
 
@@ -130,8 +130,8 @@ main()
       fi
 
       if $show_gpu_usage; then
-	 tmux set-option -ga status-right "#[fg=${brightOrange},bg=${powerbg},nobold,nounderscore,noitalics] ${right_sep}#[fg=${dark_gray},bg=${brightOrange}] #($current_dir/gpu_usage.sh)"
-	 powerbg=${brightOrange}
+	 tmux set-option -ga status-right "#[fg=${brightrose},bg=${powerbg},nobold,nounderscore,noitalics] ${right_sep}#[fg=${dark_gray},bg=${brightrose}] #($current_dir/gpu_usage.sh)"
+	 powerbg=${brightrose}
       fi
 
       if $show_network; then # network
@@ -145,16 +145,16 @@ main()
       fi
 
       if $show_military; then # military time
-	tmux set-option -ga status-right "#[fg=${orange},bg=${powerbg},nobold,nounderscore,noitalics] ${right_sep}#[fg=${white},bg=${orange}] %a %m/%d %R ${timezone} "
+	tmux set-option -ga status-right "#[fg=${rose},bg=${powerbg},nobold,nounderscore,noitalics] ${right_sep}#[fg=${white},bg=${rose}] %a %m/%d %R ${timezone} "
       else
-	tmux set-option -ga status-right "#[fg=${orange},bg=${powerbg},nobold,nounderscore,noitalics] ${right_sep}#[fg=${white},bg=${orange}] %a %m/%d %I:%M %p ${timezone} "
+	tmux set-option -ga status-right "#[fg=${rose},bg=${powerbg},nobold,nounderscore,noitalics] ${right_sep}#[fg=${white},bg=${rose}] %a %m/%d %I:%M %p ${timezone} "
       fi
 
       tmux set-window-option -g window-status-current-format "#[fg=${dark_gray},bg=${dark_gray}]${left_sep}#[fg=${white},bg=${dark_gray}] #I #W #[fg=${dark_gray},bg=${dark_gray}]${left_sep}"
 
   # Non Powerline Configuration
   else
-    tmux set-option -g status-left "#[bg=${green},fg=${dark_gray}]#{?client_prefix,#[bg=${yellow}],} ${left_icon}"
+    tmux set-option -g status-left "#[bg=${love},fg=${dark_gray}]#{?client_prefix,#[bg=${yellow}],} ${left_icon}"
 
     tmux set-option -g  status-right ""
 
@@ -170,7 +170,7 @@ main()
       fi
 
       if $show_gpu_usage; then
-	tmux set-option -ga status-right "#[fg=${dark_gray},bg=${brightOrange}] #($current_dir/gpu_usage.sh) "
+	tmux set-option -ga status-right "#[fg=${dark_gray},bg=${brightrose}] #($current_dir/gpu_usage.sh) "
       fi
 
       if $show_network; then # network
@@ -182,9 +182,9 @@ main()
       fi
 
       if $show_military; then # military time
-	tmux set-option -ga status-right "#[fg=${white},bg=${orange}] %a %m/%d %R ${timezone} "
+	tmux set-option -ga status-right "#[fg=${white},bg=${rose}] %a %m/%d %R ${timezone} "
       else
-	tmux set-option -ga status-right "#[fg=${white},bg=${orange}] %a %m/%d %I:%M %p ${timezone} "
+	tmux set-option -ga status-right "#[fg=${white},bg=${rose}] %a %m/%d %I:%M %p ${timezone} "
       fi
 
       tmux set-window-option -g window-status-current-format "#[fg=${white},bg=${pane_border}] #I #W "
