@@ -17,37 +17,37 @@ main()
   current_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
   # set configuration option variables
-  show_battery=$(get_tmux_option "@nightowl-show-battery" true)
-  show_network=$(get_tmux_option "@nightowl-show-network" true)
-  show_weather=$(get_tmux_option "@nightowl-show-weather" true)
-  show_fahrenheit=$(get_tmux_option "@nightowl-show-fahrenheit" true)
-  show_powerline=$(get_tmux_option "@nightowl-show-powerline" false)
-  show_left_icon=$(get_tmux_option "@nightowl-show-left-icon" smiley)
-  show_military=$(get_tmux_option "@nightowl-military-time" false)
-  show_timezone=$(get_tmux_option "@nightowl-show-timezone" true)
-  show_left_sep=$(get_tmux_option "@nightowl-show-left-sep" )
-  show_right_sep=$(get_tmux_option "@nightowl-show-right-sep" )
-  show_border_contrast=$(get_tmux_option "@nightowl-border-contrast" false)
-  show_cpu_usage=$(get_tmux_option "@nightowl-cpu-usage" false)
-  show_ram_usage=$(get_tmux_option "@nightowl-ram-usage" false)
-  show_gpu_usage=$(get_tmux_option "@nightowl-gpu-usage" false)
+  show_battery=$(get_tmux_option "@rosepine-show-battery" true)
+  show_network=$(get_tmux_option "@rosepine-show-network" true)
+  show_weather=$(get_tmux_option "@rosepine-show-weather" true)
+  show_fahrenheit=$(get_tmux_option "@rosepine-show-fahrenheit" true)
+  show_powerline=$(get_tmux_option "@rosepine-show-powerline" false)
+  show_left_icon=$(get_tmux_option "@rosepine-show-left-icon" smiley)
+  show_military=$(get_tmux_option "@rosepine-military-time" false)
+  show_timezone=$(get_tmux_option "@rosepine-show-timezone" true)
+  show_left_sep=$(get_tmux_option "@rosepine-show-left-sep" )
+  show_right_sep=$(get_tmux_option "@rosepine-show-right-sep" )
+  show_border_contrast=$(get_tmux_option "@rosepine-border-contrast" false)
+  show_cpu_usage=$(get_tmux_option "@rosepine-cpu-usage" false)
+  show_ram_usage=$(get_tmux_option "@rosepine-ram-usage" false)
+  show_gpu_usage=$(get_tmux_option "@rosepine-gpu-usage" false)
 
 
-  # Night Owl Color Pallette
+  # Rose Pine Color Pallette
   white='#ffffff'
   gray='#0b2942'
   dark_gray='#01111d'
   high_contrast_pane_border='#64B5F6'
   pane_border='#5f7e97'
-  blue='#82aaff',
-  brightCyan='#7fdbca'
+  blue='#3e8fb0',
+  brightCyan='#c4a7e7'
   cyan='#21c7a8'
-  green='#22da6e'
-  brightOrange='#f78c6c'
-  orange='#df5f00'
+  green='#eb6f92'
+  brightOrange='#f6c177'
+  orange='#f6c177'
   red='#ef5350'
-  pink='#c792ea'
-  brightYellow="#ffeb95"
+  pink='#ebbcba'
+  brightYellow="#ea9a97"
   yellow='#addb67'
 
 
